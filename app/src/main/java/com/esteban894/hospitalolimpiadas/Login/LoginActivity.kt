@@ -1,9 +1,11 @@
 package com.esteban894.hospitalolimpiadas.Login
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
+import com.esteban894.hospitalolimpiadas.PersonalView
 import com.esteban894.hospitalolimpiadas.R
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -13,6 +15,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var btnLogin: MaterialButton
     private lateinit var etEmail: EditText
     private lateinit var etPassword: EditText
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,13 +34,38 @@ class LoginActivity : AppCompatActivity() {
     private fun initListeners() {
         btnBack.setOnClickListener { onBackPressed() }
         btnLogin.setOnClickListener {
-            Toast.makeText(this, getUserData(), Toast.LENGTH_LONG).show()
+            val result = getUserData()
+
+            when (result) {
+                is ValidationResult.Success -> {
+                    val intent = Intent(this, PersonalView::class.java)
+                    startActivity(intent)
+                }
+
+                is ValidationResult.Error -> {
+                    Toast.makeText(this, result.errorMessage, Toast.LENGTH_SHORT).show()
+                    etEmail.text.clear()
+                    etPassword.text.clear()
+                }
+            }
         }
     }
 
-    private fun getUserData(): String {
+    private fun getUserData(): ValidationResult {
         val userEmail = etEmail.text.toString()
         val userPassword = etPassword.text.toString()
-        return "$userEmail, $userPassword"
+
+        if (userEmail.isEmpty() || userPassword.isEmpty()) {
+            return ValidationResult.Error("Error en tus credenciales")
+        }
+
+        // TODO validación de datos con el backend web
+        if(userEmail == "esteban@test.com" && userPassword == "asdasd") {
+            return ValidationResult.Success
+        } else {
+            return ValidationResult.Error("Error en tus credenciales")
+        }
+
+        return ValidationResult.Success
     }
 }
