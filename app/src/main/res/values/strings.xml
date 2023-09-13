@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">HospitalOlimpiadas</string>
+    <string name="app_name">Blue Button App</string>
+    <string name="main_title">Aplicación de Atención Médica</string>
+    <string name="main_description">Bienvenido a nuestra aplicación de atención médica.
+Esta aplicación te permitirá realizar un llamado a un enfermero o médico en caso de emergencias</string>
+    <string name="main_btn_login">Iniciar Sesión</string>
+    <string name="main_btn_register">Registrarse</string>
+
+    <string name="login_btn">Login</string>
+    <string name="login_title">Iniciar Sesión</string>
+    <string name="login_email_label">Dirección de Email</string>
+    <string name="login_password_label">Contraseña</string>
+    <string name="login_btn_back">Volver atrás</string>
+
+    <string name="register_title">Registrarse</string>
+
 </resources>
