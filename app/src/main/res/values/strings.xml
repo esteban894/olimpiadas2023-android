@@ -14,6 +14,10 @@ Esta aplicación te permitirá realizar un llamado a un enfermero o médico en c
 
     <string name="personal_title">Lista de Llamados</string>
     <string name="personal_btn_back">Volver atrás</string>
+    <string name="personal_item_sector">Sector</string>
+    <string name="personal_item_type">Tipo</string>
+    <string name="personal_item_status_taked">Atendido</string>
+    <string name="personal_item_status_no_taked">No atendido</string>
 
 
 </resources>

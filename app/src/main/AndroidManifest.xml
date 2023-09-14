@@ -13,10 +13,7 @@
         android:theme="@style/Theme.HospitalOlimpiadas"
         tools:targetApi="31">
         <activity
-            android:name=".PersonalView"
-            android:exported="false" />
-        <activity
-            android:name=".Register.RegisterActivity"
+            android:name=".PersonalView.PersonalView"
             android:exported="false" />
         <activity
             android:name=".Login.LoginActivity"

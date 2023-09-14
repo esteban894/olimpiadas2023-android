@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
-import com.esteban894.hospitalolimpiadas.PersonalView
+import com.esteban894.hospitalolimpiadas.PersonalView.PersonalView
 import com.esteban894.hospitalolimpiadas.R
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -60,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         // TODO validación de datos con el backend web
-        if(userEmail == "esteban@test.com" && userPassword == "asdasd") {
+        if(userEmail == "asd@asd.com" && userPassword == "asd") {
             return ValidationResult.Success
         } else {
             return ValidationResult.Error("Error en tus credenciales")
