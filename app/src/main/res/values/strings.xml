@@ -1,10 +1,8 @@
 <resources>
     <string name="app_name">Blue Button App</string>
     <string name="main_title">Aplicación de Atención Médica</string>
-    <string name="main_description">Bienvenido a nuestra aplicación de atención médica.
-Esta aplicación te permitirá realizar un llamado a un enfermero o médico en caso de emergencias</string>
+    <string name="main_description">Bienvenido a nuestra aplicación para alarmas de código azul</string>
     <string name="main_btn_login">Iniciar Sesión</string>
-    <string name="main_btn_register">Registrarse</string>
 
     <string name="login_btn">Ingresar</string>
     <string name="login_title">Iniciar Sesión</string>
@@ -18,6 +16,5 @@ Esta aplicación te permitirá realizar un llamado a un enfermero o médico en c
     <string name="personal_item_type">Tipo</string>
     <string name="personal_item_status_taked">Atendido</string>
     <string name="personal_item_status_no_taked">No atendido</string>
-
 
 </resources>

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.HospitalOlimpiadas"
         tools:targetApi="31">
         <activity
+            android:name=".DetailCall.DetailCallActivity"
+            android:exported="false" />
+        <activity
             android:name=".PersonalView.PersonalView"
             android:exported="false" />
         <activity

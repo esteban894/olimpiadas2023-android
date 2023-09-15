@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_secondary"
-    tools:context=".PersonalView.PersonalView">
+    tools:context=".DetailCall.DetailCallActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvCardTitle"
@@ -39,11 +39,11 @@
                 android:src="@drawable/ic_arrow_back" />
 
             <TextView
-                android:id="@+id/tvTitle"
+                android:id="@+id/tvSector"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="12dp"
-                android:text="@string/personal_title"
+                tools:text="Titulo"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/text_main_secondary"
@@ -57,15 +57,38 @@
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCalls"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="700dp"
-        android:padding="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/cvCardTitle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cvCardTitle" />
+        app:layout_constraintEnd_toEndOf="parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cvCardTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTipo"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:layout_height="wrap_content"
+                tools:text="Tipo de llamada"/>
+
+            <CheckBox
+                android:id="@+id/cbEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                tools:text="Estado de la llamada"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
