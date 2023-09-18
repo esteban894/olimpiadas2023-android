@@ -6,7 +6,7 @@
 
     <string name="login_btn">Ingresar</string>
     <string name="login_title">Iniciar Sesión</string>
-    <string name="login_email_label">Dirección de Email</string>
+    <string name="login_username_label">Nombre de usuario</string>
     <string name="login_password_label">Contraseña</string>
     <string name="login_btn_back">Volver atrás</string>
 

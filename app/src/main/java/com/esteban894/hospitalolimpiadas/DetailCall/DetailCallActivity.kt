@@ -1,6 +1,7 @@
 package com.esteban894.hospitalolimpiadas.DetailCall
 
 import android.content.Intent
+import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -53,6 +54,8 @@ class DetailCallActivity : AppCompatActivity() {
                         R.color.call_item_taked
                     )
                 )
+
+                cbEstado.buttonTintList = ColorStateList.valueOf(ContextCompat.getColor(cbEstado.context, R.color.call_item_taked))
             } else {
                 cbEstado.text = getString(R.string.personal_item_status_no_taked)
                 cbEstado.setTextColor(
@@ -61,6 +64,7 @@ class DetailCallActivity : AppCompatActivity() {
                         R.color.call_item_no_taked
                     )
                 )
+                cbEstado.buttonTintList = ColorStateList.valueOf(ContextCompat.getColor(cbEstado.context, R.color.call_item_no_taked))
             }
         }
     }
@@ -99,9 +103,12 @@ class DetailCallActivity : AppCompatActivity() {
                     R.color.call_item_taked
                 )
             )
+
+            cbEstado.buttonTintList = ColorStateList.valueOf(ContextCompat.getColor(cbEstado.context, R.color.call_item_taked))
             cbEstado.isEnabled = false
         } else {
             ContextCompat.getColor(cbEstado.context, R.color.call_item_no_taked)
+            cbEstado.buttonTintList = ColorStateList.valueOf(ContextCompat.getColor(cbEstado.context, R.color.call_item_no_taked))
         }
     }
 }
