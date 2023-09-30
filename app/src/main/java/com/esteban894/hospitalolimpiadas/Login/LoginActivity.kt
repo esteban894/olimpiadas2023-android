@@ -54,6 +54,7 @@ class LoginActivity : AppCompatActivity() {
             when (result) {
                 is ValidationResult.Success -> {
                     val intent = Intent(this, PersonalView::class.java)
+                    intent.putExtra("username", etUsername.text)
                     startActivity(intent)
                 }
 

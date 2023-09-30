@@ -12,6 +12,7 @@ data class UserDtoResponse(
     val name: String?,
     val password: String?,
     val updatedAt: String?,
+    val message: String?
 )
 
 
